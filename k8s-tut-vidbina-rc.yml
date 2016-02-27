@@ -1,23 +1,24 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: k8s-tutorial
+  name: k8s-tut-david
   labels:
-    app: k8s-tutorial
-    name: k8s-tutorial
+    app: k8s-tut-vidbina
+    name: k8s-tut-vidbina
+    owner: vidbina
 spec:
   replicas: 3
   template:
     metadata:
       labels:
-        app: k8s-tutorial
-        name: k8s-tutorial
+        app: k8s-tut-vidbina
+        name: k8s-tut-vidbina
     spec:
       imagePullSecrets:
         - name: registry
       containers:
-        - name: k8s-tutorial
-          image: vidbina/k8stutorial:latest
+        - name: k8s-tut-vidbina
+          image: mobilityhouse/k8s-tut-vidbina:latest
           ports:
             - containerPort: 8000
           volumeMounts:
@@ -27,4 +28,4 @@ spec:
       volumes:
       - name: mysecret
         secret:
-          secretName: k8stutorial-secret
+          secretName: k8s-tut-vidbina-secret
