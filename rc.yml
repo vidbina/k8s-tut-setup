@@ -18,7 +18,7 @@ spec:
         - name: registry
       containers:
         - name: k8s-tut-vidbina
-          image: mobilityhouse/k8s-tut-vidbina:latest
+          image: vidbina/k8stutorial:latest
           ports:
             - containerPort: 8000
           volumeMounts:
