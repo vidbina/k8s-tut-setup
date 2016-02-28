@@ -4,10 +4,10 @@ metadata:
   name: k8s-tut-david
   labels:
     app: k8s-tut-vidbina
-    name: k8s-tut-vidbina
+    name: k8s-tutorial
     owner: vidbina
 spec:
-  replicas: 3
+  replicas: 2
   template:
     metadata:
       labels:
@@ -28,4 +28,4 @@ spec:
       volumes:
       - name: mysecret
         secret:
-          secretName: k8s-tut-vidbina-secret
+          secretName: k8s-tut-secret
